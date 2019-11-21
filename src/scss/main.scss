@@ -115,16 +115,24 @@ $cta: #007cf9;
       padding: 0 7vw 12vh;
       bottom: 0;
       box-sizing: content-box;
+      @include to(2) {
+        padding: 0 7vw 5vh;
+      }
     }
     .title {
       font-family: graphik, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 51.3px;
-      line-height: 52px;
+      line-height: 58px;
       text-transform: lowercase;
-      color: $txt;
-      margin-bottom: 20px;
+      background-color: $txt;
+      color: $accent;
+      padding: 6px;
+      margin-bottom: 30px;
+      @include to(2) {
+        margin-bottom: 20px;
+      }
       strong {
         color: $accent;
       }
@@ -138,7 +146,7 @@ $cta: #007cf9;
       font-style: normal;
       font-weight: normal;
       font-size: 25.6px;
-      line-height: 30px;
+      line-height: 34px;
       color: $txt;
       strong {
         color: $accent;
@@ -159,9 +167,12 @@ $cta: #007cf9;
       text-align: center;
       text-transform: lowercase;
       color: #ffffff;
-      margin-top: 40px;
+      margin-top: 35px;
       opacity: 1;
       transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
+      @include to(2) {
+        margin-bottom: 25px;
+      }
       @include to(2) {
         font-size: 22px;
         padding: 10px 20px;
