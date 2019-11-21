@@ -148,6 +148,9 @@ $cta: #007cf9;
       font-size: 25.6px;
       line-height: 34px;
       color: $txt;
+      @include to(2) {
+        line-height: 30px;
+      }
       strong {
         color: $accent;
         font-weight: 400;
