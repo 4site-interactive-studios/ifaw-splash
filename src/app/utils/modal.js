@@ -40,7 +40,7 @@ export class Modal {
     });
     this.overlay = overlay;
     document.body.appendChild(overlay);
-    window.setTimeout(this.open.bind(this), 2000);
+    window.setTimeout(this.open.bind(this), 0); //Delay before opening splash screen
   }
   open() {
     let hideSplash = crumbs.get("hideSplash"); // Get cookie
