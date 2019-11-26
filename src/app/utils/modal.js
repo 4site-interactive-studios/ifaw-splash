@@ -4,13 +4,13 @@ export class Modal {
     this.options = Object.assign(
       {},
       {
-        title: "do you know <strong>4Site</strong>?",
+        title: "",
         paragraph:
-          "4Site Interactive Studios has been providing creative digital services to the <strong>non-profit</strong> and small business community in Washington, DC since 2001.",
-        cta_label: "Go To 4Site",
-        cta_link: "https://www.4sitestudios.com",
-        background_desktop: "https://picsum.photos/3840/2160",
-        background_mobile: "https://picsum.photos/1242/2688",
+          "",
+        cta_label: "",
+        cta_link: "",
+        background_desktop: "",
+        background_mobile: "",
         debug: false
       },
       options
