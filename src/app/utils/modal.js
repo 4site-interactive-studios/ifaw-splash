@@ -5,10 +5,11 @@ export class Modal {
       {},
       {
         title: "",
-        paragraph:
-          "",
+        paragraph: "",
         cta_label: "",
         cta_link: "",
+        start_date: "",
+        end_date: "",
         background_desktop: "",
         background_mobile: "",
         debug: false
@@ -45,7 +46,16 @@ export class Modal {
   open() {
     let hideSplash = crumbs.get("hideSplash"); // Get cookie
     if (!hideSplash || this.options.debug) {
-      this.overlay.classList.remove("is-hidden");
+      const now = new Date();
+      let startDate = new Date(this.options.start_date);
+      startDate = startDate.setHours(0, 0, 0);
+      let endDate = new Date(this.options.end_date);
+      endDate = endDate.setHours(11, 59, 59);
+
+      // Right now is on or after the Start Date AND on or before the End Date
+      if (startDate <= now && now <= endDate) {
+        this.overlay.classList.remove("is-hidden");
+      }
     }
   }
   close(e) {
