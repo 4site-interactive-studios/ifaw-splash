@@ -48,9 +48,9 @@ export class Modal {
     if (!hideSplash || this.options.debug) {
       const now = new Date();
       let startDate = new Date(this.options.start_date);
-      startDate = startDate.setHours(0, 0, 0);
+      startDate = startDate.setHours(0, 0, 0); // Starts on the first second of the Start Date
       let endDate = new Date(this.options.end_date);
-      endDate = endDate.setHours(11, 59, 59);
+      endDate = endDate.setHours(11, 59, 59); // End on the last second of the End Date
 
       // Right now is on or after the Start Date AND on or before the End Date
       if (startDate <= now && now <= endDate) {
