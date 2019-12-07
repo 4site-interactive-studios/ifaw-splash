@@ -111,10 +111,26 @@ $cta: #007cf9;
 
     .container {
       position: absolute;
-      max-width: 500px;
-      padding: 0 7vw 12vh;
+      max-width: 550px;
+      padding: 0 7vw 7vh;
       bottom: 0;
       box-sizing: content-box;
+      &.right {
+        right: 0;
+        .title,
+        p {
+          text-align: right;
+          @include to(2) {
+            text-align: left;
+          }
+        }
+        .cta {
+          margin-left: auto;
+          @include to(2) {
+            margin-right: auto;
+          }
+        }
+      }
       @include to(2) {
         padding: 0 7vw 5vh;
       }
@@ -125,20 +141,20 @@ $cta: #007cf9;
       font-weight: bold;
       font-size: 51.3px;
       line-height: 58px;
-      text-transform: lowercase;
       background-color: $txt;
       color: $accent;
       padding: 6px;
       margin-bottom: 30px;
-      @include to(2) {
-        margin-bottom: 20px;
-      }
       strong {
         color: $accent;
       }
       @include to(2) {
-        font-size: 38px;
+        font-size: 36px;
         line-height: 35px;
+        margin-bottom: 20px;
+        br {
+          display: none;
+        }
       }
     }
     p {
@@ -149,7 +165,11 @@ $cta: #007cf9;
       line-height: 34px;
       color: $txt;
       @include to(2) {
+        font-size: 22px;
         line-height: 30px;
+        br {
+          display: none;
+        }
       }
       strong {
         color: $accent;
@@ -168,7 +188,6 @@ $cta: #007cf9;
       font-size: 26px;
       line-height: 28px;
       text-align: center;
-      text-transform: lowercase;
       color: #ffffff;
       margin-top: 35px;
       opacity: 1;
@@ -185,6 +204,11 @@ $cta: #007cf9;
         background-color: $txt;
         color: $accent;
       }
+    }
+    .credits {
+      margin-top: 5vh;
+      font-size: 12px;
+      font-weight: 600;
     }
   }
 }
