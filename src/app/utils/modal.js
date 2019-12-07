@@ -69,9 +69,9 @@ export class Modal {
     end.setHours(23, 59, 59);
     let now = new Date();
     if (this.options.debug) {
-      console.log(start);
-      console.log(end);
-      console.log(now);
+      console.log("Start", start);
+      console.log("End", end);
+      console.log("Now", now);
     }
     return now >= start || now <= end;
   }
