@@ -33,7 +33,7 @@ export class Modal {
         <a href="#" class="button-close"></a>
         <span href="#" class="logo">IFAW</span>
         <div class="container ${this.options.align}">
-        <h1 class="title">${this.options.title}</h1>
+        <h1 class="title"><span>${this.options.title}</span></h1>
         <p>${this.options.paragraph}</p>
         <a class="cta" href="${this.options.cta_link}">${
       this.options.cta_label
