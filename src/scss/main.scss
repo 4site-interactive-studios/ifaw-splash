@@ -112,7 +112,7 @@ $cta: #007cf9;
     .container {
       position: absolute;
       max-width: 600px;
-      padding: 0 7vw 5vh;
+      padding: 0 7vw 10vh;
       bottom: 0;
       box-sizing: content-box;
       &.right {
@@ -132,7 +132,7 @@ $cta: #007cf9;
         }
       }
       @include to(2) {
-        padding: 0 7vw 2vh;
+        padding: 0 7vw 5vh;
       }
     }
     .title {
@@ -151,7 +151,7 @@ $cta: #007cf9;
         box-decoration-break: clone;
       }
       strong {
-        color: $accent;
+        color: #000;
       }
       @include to(2) {
         font-size: 36px;
@@ -214,9 +214,16 @@ $cta: #007cf9;
       }
     }
     .credits {
-      margin-top: 5vh;
       font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
       font-weight: 600;
+      position: absolute;
+      bottom: 5vh;
+      left: 6vw;
+      box-sizing: content-box;
+      @include to(2) {
+        bottom: 15px;
+      }
     }
   }
 }
